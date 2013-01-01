@@ -86,4 +86,6 @@
 			return SteamID64ToSteamID($this->SteamID64);
 		}
 	}
+	
+?>
 			
