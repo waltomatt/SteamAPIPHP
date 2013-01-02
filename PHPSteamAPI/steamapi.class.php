@@ -11,9 +11,8 @@
 	*/
 	
 	function SteamID64ToSteamID($sid) {
-		$authserver = bcsub($sid, '76561197960265728') & 1;
-		$authid = (bcsub($sid, '76561197960265728')-$authserver)/2;
-		return "STEAM_0:$authserver:$authid";
+		$spart = (bcsub($sid, '76561197960265728')-(bcsub($sid, '76561197960265728') & 1))/2;
+		return "STEAM_0:$$spart";
 	}
 	
 	class steamAPI {
