@@ -19,5 +19,5 @@ functions:
 	$profile->GetAvatarLarge(); - Returns a 184x184px avatar.
 	$profile->GetSteamID(); - Returns a normal 32bit steamid.
 
-	SteamIDToSteamID64($steamid) - Converts SteamID64 (community ID) to a normal SteamID used in-game.
+	SteamID64ToSteamID($steamid) - Converts SteamID64 (community ID) to a normal SteamID used in-game.
 
