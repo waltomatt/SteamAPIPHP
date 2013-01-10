@@ -20,13 +20,19 @@
 		private $fm;
 		private $skey;
 		
-		function __construct($key, $sid, $format) {
+		/**
+		 * Constructor for steamAPI class
+		 * 
+		 * @param 	string 	$key
+		 * @param 	number 	$sid
+		 * @param 	string 	$format
+		 * @return 	void
+		 */
+		function __construct($key, number $sid, $format = "xml") {
 			if (!$sid) {
 				die("No SteamID64 Set in new steamAPI method");
 			} elseif(!$key) {
 				die("No Steam API key set in new steamAPI method");
-			} elseif (!$format) {
-				$this->format = "xml";
 			}
 			$this->sid64 = $sid;
 			$this->fm = $format;
