@@ -24,16 +24,16 @@
 		 * Constructor for steamAPI class
 		 * 
 		 * @param 	string 	$key
-		 * @param 	number 	$sid
+		 * @param 	int 	$sid
 		 * @param 	string 	$format
 		 * @return 	void
 		 */
-		function __construct($key, number $sid, $format = "xml") {
-			if (!$sid) {
+		function __construct($key, $sid, $format = "xml") {
+			if ( ! $sid )
 				die("No SteamID64 Set in new steamAPI method");
-			} elseif(!$key) {
+			elseif( ! $key)
 				die("No Steam API key set in new steamAPI method");
-			}
+
 			$this->sid64 = $sid;
 			$this->fm = $format;
 			$this->skey = $key;
